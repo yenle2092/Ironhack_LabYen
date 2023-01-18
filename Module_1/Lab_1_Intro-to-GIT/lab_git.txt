@@ -1,0 +1,155 @@
+lehai@LAPTOP-NSB0M5TU MINGW64 ~
+$ cd Desktop
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop
+$ mkdir PROJECTS
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop
+$ cd PROJECTS
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS
+$ git clone https://github.com/yenle2092/Ironyen.git
+Cloning into 'Ironyen'...
+warning: You appear to have cloned an empty repository.
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS
+$ cd Ironyen
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ touch about.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ echo "My name is Yen" > about.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git add .
+warning: in the working copy of 'about.txt', LF will be replaced by CRLF the next time Git touches it
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git add about.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git commit -m "first commit"
+[main (root-commit) df406b3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git log
+commit df406b3cf261cee523a1058c9dfcb30c04419e4f (HEAD -> main)
+Author: YEN LE <xumi2092@gmail.com>
+Date:   Mon Jan 16 21:58:19 2023 +0100
+
+    first commit
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git branch
+* main
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git remote -v
+origin  https://github.com/yenle2092/Ironyen.git (fetch)
+origin  https://github.com/yenle2092/Ironyen.git (push)
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 75.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/yenle2092/Ironyen.git
+ * [new branch]      main -> main
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironyen (main)
+$ cd ..
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS
+$ git clone https://github.com/yenle2092/Ironkhanh.git
+Cloning into 'Ironkhanh'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS
+$ cd Ironkhanh
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (master)
+$ git checkout -b classmate
+Switched to a new branch 'classmate'
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ touch yen.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ echo "I enrolled Ironhack's Data Analytics bootcamp because...." > yen.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ git status
+On branch classmate
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        yen.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ git add yen.txt
+warning: in the working copy of 'yen.txt', LF will be replaced by CRLF the next time Git touches it
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ git commit -m "add my file"
+[classmate 9720c8f] add my file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 yen.txt
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ git status
+On branch classmate
+nothing to commit, working tree clean
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
+$ git push -u origin classmate
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 327 bytes | 109.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'classmate' on GitHub by visiting:
+remote:      https://github.com/yenle2092/Ironkhanh/pull/new/classmate
+remote:
+To https://github.com/yenle2092/Ironkhanh.git
+ * [new branch]      classmate -> classmate
+branch 'classmate' set up to track 'origin/classmate'.
+
+lehai@LAPTOP-NSB0M5TU MINGW64 ~/Desktop/PROJECTS/Ironkhanh (classmate)
