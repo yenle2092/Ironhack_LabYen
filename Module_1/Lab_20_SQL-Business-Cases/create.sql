@@ -1,48 +1,54 @@
 CREATE DATABASE lab_mysql;
 USE lab_mysql;
 Create table cars (
-  VIN int,  
-  product_id int,
+  ID int,
+  VIN varchar(255),  
   manufacturer varchar (255),
+  model varchar(255),
   year year,
   color varchar(255),
-  primary key (VIN)
+  primary key (ID)
 );
 
-drop table car;
+drop table cars;
 
 create Table customers (
+  ID int,
   customer_id int,
-  customer_name varchar(255),
-  phone_number varchar(255),
+  name varchar(255),
+  phone varchar(255),
   email varchar(255),
   adress varchar(255),
   city varchar(255),
   state_province varchar(255),
   country varchar(255),
-  zip_code int,
-  primary key (customer_id)
-  );
-  Create Table Salesperson (
-  staff_id int,
-  name_staff varchar(255),
-  store varchar(255),
-  primary key (staff_id)
+  postal int,
+  primary key (ID)
   );
   
-  alter table Salesperson
-  add primary key (staff_id);
+  drop table customers;
+  
+  Create Table Salesperson (
+  id int,
+  staff_id varchar(255),
+  name varchar(255),
+  store varchar(255),
+  primary key (id)
+  );
+  
+  drop table Salesperson;
   
  create Table Invoices (
+  id int,
   invoice_number int,
   date date,
-  VIN int, 
-  customer_id int,
-  staff_id int,
-  primary key (invoice_number),
-  foreign key (customer_id) references customers (customer_id),
-  foreign key (VIN) references cars (VIN),
-  foreign key (staff_id) references salesperson (staff_id)
+  Car int,
+  customer int,
+  Sales_person int,
+  primary key (id),
+  foreign key (customer) references customers (id),
+  foreign key (car) references cars (id),
+  foreign key (sales_person) references salesperson (id)
   );
   
   drop table Invoices;
