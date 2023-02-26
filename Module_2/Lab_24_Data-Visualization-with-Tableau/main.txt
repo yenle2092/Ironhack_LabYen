@@ -3,4 +3,4 @@ https://public.tableau.com/views/NFLTeamPerformanceDashboard_16765020487750/Stor
 
 
 Part 2: 
-https://public.tableau.com/shared/B4XHZXFPC?:display_count=n&:origin=viz_share_link
+https://public.tableau.com/views/WorldMap_16765037144370/Story1?:language=en-US&:display_count=n&:origin=viz_share_link
